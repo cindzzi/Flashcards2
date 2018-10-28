@@ -14,6 +14,7 @@
 		6C47CA362184F23A00CF4550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C47CA342184F23A00CF4550 /* LaunchScreen.storyboard */; };
 		6C47CA412184F23A00CF4550 /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47CA402184F23A00CF4550 /* FlashcardsTests.swift */; };
 		6C47CA4C2184F23A00CF4550 /* FlashcardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47CA4B2184F23A00CF4550 /* FlashcardsUITests.swift */; };
+		6C47CA5A2185029000CF4550 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C47CA592185029000CF4550 /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6C47CA472184F23A00CF4550 /* FlashcardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C47CA4B2184F23A00CF4550 /* FlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITests.swift; sourceTree = "<group>"; };
 		6C47CA4D2184F23A00CF4550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C47CA592185029000CF4550 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				6C47CA2B2184F23800CF4550 /* AppDelegate.swift */,
 				6C47CA2D2184F23800CF4550 /* ViewController.swift */,
 				6C47CA2F2184F23800CF4550 /* Main.storyboard */,
+				6C47CA592185029000CF4550 /* CreationViewController.swift */,
 				6C47CA322184F23A00CF4550 /* Assets.xcassets */,
 				6C47CA342184F23A00CF4550 /* LaunchScreen.storyboard */,
 				6C47CA372184F23A00CF4550 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				6C47CA2E2184F23800CF4550 /* ViewController.swift in Sources */,
 				6C47CA2C2184F23800CF4550 /* AppDelegate.swift in Sources */,
+				6C47CA5A2185029000CF4550 /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

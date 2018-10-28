@@ -46,12 +46,49 @@
                                     <outletCollection property="gestureRecognizers" destination="u2M-ZJ-g6E" appends="YES" id="WrN-xy-gda"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjB-lf-TtL" userLabel="Btn Option one">
+                                <rect key="frame" x="110" y="413" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Rio De Janeiro"/>
+                                <connections>
+                                    <action selector="DidTapOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cr3-lM-uhA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C0-Cl-9FX" userLabel="Btn Option two">
+                                <rect key="frame" x="110" y="451" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Brasilia"/>
+                                <connections>
+                                    <action selector="DidTapOptionTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GEO-pu-FBY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLx-97-eHq" userLabel="Btn Option three">
+                                <rect key="frame" x="106" y="489" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sao Paulo"/>
+                                <connections>
+                                    <action selector="DidTapOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mdd-mu-wRE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mD-KJ-LHr">
+                                <rect key="frame" x="166" y="606" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="9Nr-Z7-nfd" kind="show" id="z6n-LP-vhi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YYB-aI-x52"/>
                     <connections>
+                        <outlet property="BtnOptionThree" destination="bLx-97-eHq" id="rwU-FE-ZcI"/>
+                        <outlet property="BtnOptionTwo" destination="3C0-Cl-9FX" id="mZN-0v-ygr"/>
                         <outlet property="backLabel" destination="RBT-s2-Bwk" id="PEy-2P-xHH"/>
+                        <outlet property="btnOptionOne" destination="KjB-lf-TtL" id="SsY-XO-6yr"/>
+                        <outlet property="card" destination="Bhi-0i-51n" id="P6u-Uu-pei"/>
                         <outlet property="frontLabel" destination="YUz-Zf-ZrS" id="1Vi-JR-fRw"/>
                     </connections>
                 </viewController>
@@ -62,7 +99,72 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Creation View Controller-->
+        <scene sceneID="V8J-WI-6xZ">
+            <objects>
+                <viewController id="xW3-zY-iT2" customClass="CreationViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hSK-NG-GiH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXk-J2-4Rt">
+                                <rect key="frame" x="74" y="115" width="221" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VrC-Wo-uKY">
+                                <rect key="frame" x="74" y="153" width="221" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2lP-uB-cIf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wt6-J2-dk9">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="tK7-d4-1z4">
+                            <connections>
+                                <action selector="DidTapOnCancel:" destination="xW3-zY-iT2" id="lYk-Hu-FgY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="oXN-9l-kmP">
+                            <connections>
+                                <action selector="DidTapDone:" destination="xW3-zY-iT2" id="bBO-oz-8ZB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="VrC-Wo-uKY" id="hMQ-qP-Tsv"/>
+                        <outlet property="questionTextField" destination="OXk-J2-4Rt" id="2gm-MQ-mxB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wwv-Lo-F6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2679.1999999999998" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j4Z-mq-B9b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Nr-Z7-nfd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="82g-hN-tST">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xW3-zY-iT2" kind="relationship" relationship="rootViewController" id="Xc0-Cv-Wog"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2Y-Xg-sbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
