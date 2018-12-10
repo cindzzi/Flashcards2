@@ -79,6 +79,16 @@ class ViewController: UIViewController {
         else {
             frontLabel.isHidden = true
         }
+        flipFlashcard()
+    }
+    func flipFlashcard(){
+        if frontLabel.isHidden == true { frontLabel.isHidden = false}
+        else {
+            frontLabel.isHidden = true
+        }
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            self.frontLabel.isHidden = true
+        })
     }
     func updateLabels(){
         //get current flashcard
@@ -160,6 +170,8 @@ class ViewController: UIViewController {
         
         //uddate buttons
         updateNextPrevButtons()
+        
+        animateCardOut()
     }
     
     @IBAction func DipTapOnPrev(_ sender: Any) {
@@ -170,8 +182,25 @@ class ViewController: UIViewController {
         
         //uddate buttons
         updateNextPrevButtons()
+        //animateCardIn()
     }
     
+    func animateCardOut() {
+        UIView.animate(withDuration: 0.3, animations: {self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)}, completion: { finished in
+            
+            self.updateLabels()
+            
+            self.animateCardIn()
+        })
+    }
     
+    func animateCardIn() {
+        card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity
+            
+        }
+    }
 }
 

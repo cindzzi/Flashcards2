@@ -71,9 +71,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUx-q3-VzK">
-                                <rect key="frame" x="22" y="617" width="31" height="30"/>
+                                <rect key="frame" x="6" y="600" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prev"/>
+                                <state key="normal" backgroundImage="arrowLeft"/>
                                 <state key="disabled">
                                     <color key="titleColor" red="0.68654873699999996" green="0.68654873699999996" blue="0.68654873699999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -81,20 +81,20 @@
                                     <action selector="DipTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKr-HT-kke"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mD-KJ-LHr">
-                                <rect key="frame" x="178" y="617" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mD-KJ-LHr">
+                                <rect key="frame" x="161" y="600" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" image="addButton"/>
                                 <connections>
                                     <segue destination="9Nr-Z7-nfd" kind="show" id="z6n-LP-vhi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGH-l0-0G8">
-                                <rect key="frame" x="343" y="617" width="32" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGH-l0-0G8">
+                                <rect key="frame" x="305" y="600" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
-                                <state key="disabled">
-                                    <color key="titleColor" red="0.68654873704663211" green="0.68654873704663211" blue="0.68654873704663211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="arrowRight" backgroundImage="arrowRightDisabled"/>
+                                <state key="disabled" image="arrowRight" backgroundImage="arrowRightDisabled">
+                                    <color key="titleColor" red="0.68654873699999996" green="0.68654873699999996" blue="0.68654873699999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="DipTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LjJ-fm-FKl"/>
@@ -191,4 +191,10 @@
             <point key="canvasLocation" x="1740" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addButton" width="64" height="64"/>
+        <image name="arrowLeft" width="64" height="64"/>
+        <image name="arrowRight" width="64" height="64"/>
+        <image name="arrowRightDisabled" width="64" height="64"/>
+    </resources>
 </document>
